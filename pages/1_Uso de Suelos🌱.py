@@ -343,22 +343,22 @@ df_costos=pd.concat([costo_areas,costo_forestacion,costo_incendios,costo_lena,co
 vpn_forestacion = sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_forestacion['costo']))
 cma_forestacion=vpn_forestacion/((mit_forest_b['mitigacion']).sum())
 
-vpn_manejo=npf.npv(0.06,costo_manejo['costo'])
+vpn_manejo=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_manejo['costo']))
 cma_manejo=vpn_manejo/((mit_manejo_b['mitigacion']).sum())
 
-vpn_areas=npf.npv(0.06,costo_areas['costo'])
+vpn_areas=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_areas['costo']))
 cma_areas=vpn_areas/((mit_areas_b['mitigacion']).sum())
 
-vpn_incendios=npf.npv(0.06,costo_incendios['costo'])
+vpn_incendios=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_incendios['costo']))
 cma_incendios=vpn_incendios/((mit_incendios_b['mitigacion']).sum())
 
-vpn_sustitucion=npf.npv(0.06,costo_sustitucion['costo'])
+vpn_sustitucion=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_sustitucion['costo']))
 cma_sustitucion=vpn_sustitucion/((mit_sustitucion_b['mitigacion']).sum())
 
-vpn_restauracion=npf.npv(0.06,costo_restauracion['costo'])
+vpn_restauracion=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_restauracion['costo']))
 cma_restauracion=vpn_restauracion/((mit_restauracion_b['mitigacion']).sum())
 
-vpn_lena=npf.npv(0.06,costo_lena['costo'])
+vpn_lena=sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_lena['costo']))
 cma_lena=vpn_lena/((mit_lena_b['mitigacion']).sum())
 
 
