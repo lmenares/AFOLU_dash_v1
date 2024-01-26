@@ -1,2 +1,2 @@
-numpy
-numpy-financial
+numpy==1.21.0
+numpy-financial==1.0.0
