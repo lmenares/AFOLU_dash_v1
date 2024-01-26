@@ -340,7 +340,7 @@ df_costos=pd.concat([costo_areas,costo_forestacion,costo_incendios,costo_lena,co
 
 
 #vpn_forestacion=npf.npv(0.06,costo_forestacion['costo'])
-vpn = sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_forestacion['costo']))
+vpn_forestacion = sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_forestacion['costo']))
 cma_forestacion=vpn_forestacion/((mit_forest_b['mitigacion']).sum())
 
 vpn_manejo=npf.npv(0.06,costo_manejo['costo'])
