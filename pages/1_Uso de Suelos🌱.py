@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 #from streamlit_dynamic_filters import DynamicFilters
-import numpy_financial as npf
+#import numpy_financial as npf
 
 
 st.title("Uso de Suelos 🌱")
@@ -339,7 +339,8 @@ df_costos=pd.concat([costo_areas,costo_forestacion,costo_incendios,costo_lena,co
 #df_costos=df_costos[df_costos['tiempo']>2023]
 
 
-vpn_forestacion=npf.npv(0.06,costo_forestacion['costo'])
+#vpn_forestacion=npf.npv(0.06,costo_forestacion['costo'])
+vpn = sum(cf / (1 + 0.06)**i for i, cf in enumerate(costo_forestacion['costo']))
 cma_forestacion=vpn_forestacion/((mit_forest_b['mitigacion']).sum())
 
 vpn_manejo=npf.npv(0.06,costo_manejo['costo'])
