@@ -163,7 +163,7 @@ chart_referencia = alt.Chart(df_referencia).mark_line().encode(
     width=400
 )
 
-
+st.subheader('Emisiones')
 tab1, tab2, tab3= st.tabs(["Línea Base","Escenario Mitigación", "Futuro referencia"])
 
 with tab1:
@@ -301,6 +301,7 @@ chart_mit_anual= (
      )
 )
 
+st.subheader('Acciones de mitigación')
 st.altair_chart(chart_mit_total,use_container_width=True)
 
 st.altair_chart(chart_mit_anual,use_container_width=True)
@@ -391,6 +392,7 @@ chart_costo_anual= (
      )
 )
 
+st.subheader('Costo de las medidas')
 col1, col2 = st.columns(2)
 with col1:
     st.altair_chart(chart_vpn, use_container_width=True)
