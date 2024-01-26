@@ -38,7 +38,7 @@ foresta=pd.read_csv('forestacion.csv')
 manejo=pd.read_csv('manejo.csv')
 areas=pd.read_csv('areas.csv')
 incendios=pd.read_csv('incendios.csv')
-lena=pd.read_csv('lenas.csv')
+lena=pd.read_csv('lena.csv')
 sustitucion= pd.read_csv('sustitucion.csv')
 restauracion = pd.read_csv('restauracion.csv')
 
