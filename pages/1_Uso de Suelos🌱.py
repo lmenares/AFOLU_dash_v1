@@ -33,7 +33,7 @@ st.write('''
 
 #st.markdown('A continuación se muestran los resultados segun los siguientes niveles seleccionados para cada medida:')
 bau = pd.read_csv('bau_c.csv')
-referencia =pd.read_csv('referencia.csv')
+referencia =pd.read_csv('referencia_b.csv')
 foresta=pd.read_csv('forestacion.csv')
 manejo=pd.read_csv('manejo.csv')
 areas=pd.read_csv('areas.csv')
